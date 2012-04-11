@@ -1,0 +1,22 @@
+
+#color_block {
+    background-color: #505050;
+    position: relative;
+    padding-left: 5%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+	width : 95%;
+    height: 40px;
+
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#label_lights{
+    margin-top: 10px;
+    display: none;
+    top: -3px;
+    position: relative;
+}
+
