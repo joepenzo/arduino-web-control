@@ -37,20 +37,15 @@
     
     <div data-role="content" id="content_page1">
 
-<!--        <div data-role="collapsible" data-theme="a" data-content-theme="c" id="rgb_collapsible">-->
-<!--            <h3>RGB Light</h3>-->
-<!--                <label for="slider_red">Red:</label>-->
-<!--                <input type="range" name="slider" id="slider_red" value="125" min="0" max="250" data-highlight="true" data-theme="d" onchange="updateColor()" />-->
-<!---->
-<!--                <label for="slider_green">Green:</label>-->
-<!--                <input type="range" name="slider" id="slider_green" value="125" min="0" max="250" data-highlight="true" data-theme="d" onchange="updateColor()"/>-->
-<!---->
-<!--                <label for="slider_blue">Blue:</label>-->
-<!--                <input type="range" name="slider" id="slider_blue" value="125" min="0" max="250" data-highlight="true" data-theme="d" onchange="updateColor()"/>-->
-<!--                <br>-->
-<!--                <div id="color_block"></div>-->
-<!--                <input id="rgb_button" type="submit" value="Submit" data-theme="a"/>-->
-<!--        </div>-->
+        <div data-role="collapsible" data-theme="a" data-content-theme="c" id="colorpick">
+            <h3>COLOR</h3>
+
+            <canvas id="canvas_picker"></canvas>
+            <span id='picked_color_rgb'>Selected</span>
+            <div id='picked_color' style='width: 290px; height: 100px; border: 1px solid black; margin-left: 310px; position: absolute;'> </div>
+            <div id='picked_color_preview' style='width: 290px; height: 100px; border: 1px solid black;'> </div>
+
+        </div>
 
     </div><!-- /content -->
     

@@ -279,3 +279,34 @@ function createCollapsibleContent(Type) {
 String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 }
+
+
+
+var img = new Image();
+img.src = "./img/color-picker-spectrum.png";
+var rgb;
+// Copy image (img) to canvas
+img.onload = function() {
+    var c = document.getElementById('canvas_picker');
+    var ctx = c.getContext('2d');
+    c.width  = img.width;
+    c.height = img.height;
+    ctx.drawImage(img,0,0);
+}
+
+$('#canvas_picker').bind('mousemove', function(event){
+    var x = event.pageX - event.currentTarget.offsetLeft;
+    var y = event.pageY - event.currentTarget.offsetTop;
+    var ctx = document.getElementById('canvas_picker').getContext('2d');
+    var img_data = ctx.getImageData(x, y, 1, 1).data;
+    var R = img_data[0];
+    var G = img_data[1];
+    var B = img_data[2];
+    rgb = 'rgb('+R+','+G+','+B+')';
+    $('#picked_color_preview').css('background-color', rgb);
+    $('#picked_color_rgb').html(rgb);
+});
+
+$('#canvas_picker').bind('click', function(event){
+    $('#picked_color').css('background-color', rgb);
+});
