@@ -20,3 +20,29 @@
     position: relative;
 }
 
+
+#canvas_picker, #picked_color, #picked_color_preview{
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#picked_color_preview{
+    position: absolute;
+    width: 40%;
+    height: 20px;
+    margin-top: 5px;
+}
+
+#picked_color{
+    position: absolute;
+    width: 40%;
+    height: 20px;
+    left: 50%;
+    margin-top: 5px;
+}
+
+#rgb_submitbutton_holder{
+    position: relative;
+    top: 25px;
+    height: 75px;
+}

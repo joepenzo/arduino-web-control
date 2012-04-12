@@ -61,7 +61,7 @@
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mobile/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="111" selection-start="1647" selection-end="1647" vertical-scroll-proportion="0.62952244">
+            <state line="69" column="19" selection-start="2165" selection-end="3229" vertical-scroll-proportion="0.7829233">
               <folding />
             </state>
           </provider>
@@ -70,7 +70,25 @@
       <file leaf-file-name="end_script.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mobile/js/end_script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="302" column="33" selection-start="9341" selection-end="9341" vertical-scroll-proportion="0.0">
+            <state line="285" column="0" selection-start="8691" selection-end="9239" vertical-scroll-proportion="-5.4545455">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="start_script.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mobile/js/start_script.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="7" selection-start="1509" selection-end="1899" vertical-scroll-proportion="-10.545455">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mobile/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="14" selection-start="771" selection-end="771" vertical-scroll-proportion="-12.545455">
               <folding />
             </state>
           </provider>
@@ -96,12 +114,12 @@
         <option value="$PROJECT_DIR$/desktop/arduinorequest.php" />
         <option value="$PROJECT_DIR$/desktop/index.php" />
         <option value="$PROJECT_DIR$/old_versions/V3_coockies/mobile/index.php" />
-        <option value="$PROJECT_DIR$/mobile/style.css" />
         <option value="$PROJECT_DIR$/mobile/arduinolightrequest.php" />
         <option value="$PROJECT_DIR$/mobile/arduinorgbrequest.php" />
-        <option value="$PROJECT_DIR$/mobile/js/start_script.js" />
         <option value="$PROJECT_DIR$/mobile/arduinostatusrequest.php" />
+        <option value="$PROJECT_DIR$/mobile/style.css" />
         <option value="$PROJECT_DIR$/mobile/js/end_script.js" />
+        <option value="$PROJECT_DIR$/mobile/js/start_script.js" />
         <option value="$PROJECT_DIR$/mobile/index.php" />
       </list>
     </option>
@@ -191,6 +209,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="mobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="arduinoControll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webserver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="arduinoControll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webserver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -516,19 +570,9 @@
         <state line="76" column="12" selection-start="2942" selection-end="2972" vertical-scroll-proportion="0.43035108" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="176" selection-end="188" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mobile/arduinolightrequest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="48" selection-start="310" selection-end="310" vertical-scroll-proportion="0.4011887" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/js/start_script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="27" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile/arduinostatusrequest.php">
@@ -541,16 +585,30 @@
         <state line="20" column="10" selection-start="302" selection-end="302" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="14" selection-start="771" selection-end="771" vertical-scroll-proportion="-12.545455">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mobile/js/end_script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="302" column="33" selection-start="9341" selection-end="9341" vertical-scroll-proportion="0.0">
+        <state line="285" column="0" selection-start="8691" selection-end="9239" vertical-scroll-proportion="-5.4545455">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/js/start_script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="7" selection-start="1509" selection-end="1899" vertical-scroll-proportion="-10.545455">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="111" selection-start="1647" selection-end="1647" vertical-scroll-proportion="0.62952244">
+        <state line="69" column="19" selection-start="2165" selection-end="3229" vertical-scroll-proportion="0.7829233">
           <folding />
         </state>
       </provider>

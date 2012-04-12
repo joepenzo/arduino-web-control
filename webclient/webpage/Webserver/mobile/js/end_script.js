@@ -7,6 +7,7 @@ var red = sliderStartVal;
 var green = sliderStartVal;
 var blue= sliderStartVal;
 
+
 function updateColor(){
 
    red = zeroPad(($('#slider_red').val()), 3);
@@ -282,8 +283,28 @@ String.prototype.capitalize = function() {
 
 
 
+function checkRGBmode (){
+    var picker = $("#rgb_picker_switch").val();
+    var sliders = $("#rgb_sliders_switch").val();
+
+    if (picker == 'on' ){
+        console.log('1');
+        $('#rgb_sliders_switch').val('off').slider("refresh");
+        rgbMode = 'colorPicker';
+        localStorage.setItem("rgb_mode", rgbMode);
+    }
+    if (sliders == 'on') {
+        console.log('2');
+        $('#rgb_picker_switch').val('off').slider("refresh");
+        rgbMode = 'rgbSliders';
+        localStorage.setItem("rgb_mode", $('#iptext').val());
+    }
+}
+
+
+
 var img = new Image();
-img.src = "./img/color-picker-spectrum.png";
+img.src = "./img/color-picker-spectrum-small.png";
 var rgb;
 // Copy image (img) to canvas
 img.onload = function() {
@@ -304,7 +325,6 @@ $('#canvas_picker').bind('mousemove', function(event){
     var B = img_data[2];
     rgb = 'rgb('+R+','+G+','+B+')';
     $('#picked_color_preview').css('background-color', rgb);
-    $('#picked_color_rgb').html(rgb);
 });
 
 $('#canvas_picker').bind('click', function(event){

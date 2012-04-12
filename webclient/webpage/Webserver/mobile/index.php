@@ -41,14 +41,46 @@
             <h3>COLOR</h3>
 
             <canvas id="canvas_picker"></canvas>
-            <span id='picked_color_rgb'>Selected</span>
-            <div id='picked_color' style='width: 290px; height: 100px; border: 1px solid black; margin-left: 310px; position: absolute;'> </div>
-            <div id='picked_color_preview' style='width: 290px; height: 100px; border: 1px solid black;'> </div>
+            <div id='picked_color'> </div>
+            <div id='picked_color_preview'> </div>
+            <div id='rgb_submitbutton_holder'>
+                <input id="rbg_colorpicker_button" type="submit" value="Submit" data-theme="a"/>
+            </div>
+        </div>
 
+        <div data-role="collapsible" data-theme="a" data-content-theme="c" id="test">
+            <h3>test</h3>
+
+            <fieldset class="ui-grid-b">
+                <div class="ui-block-a"><button type="submit" data-theme="a">on</button></div>
+                <div class="ui-block-b"></div>
+                <div class="ui-block-c"><button type="submit" data-theme="a">off</button></div>
+
+<!--                <div class="ui-block-a"><button type="submit" data-theme="a">1</button></div>-->
+<!--                <div class="ui-block-b"><button type="submit" data-theme="a">2</button></div>-->
+<!--                <div class="ui-block-c"><button type="submit" data-theme="a">3</button></div>-->
+<!--                <div class="ui-block-a"><button type="submit" data-theme="a">4</button></div>-->
+<!--                <div class="ui-block-b"><button type="submit" data-theme="a">5</button></div>-->
+<!--                <div class="ui-block-c"><button type="submit" data-theme="a">6</button></div>-->
+<!--                <div class="ui-block-a"><button type="submit" data-theme="a">7</button></div>-->
+<!--                <div class="ui-block-b"><button type="submit" data-theme="a">8</button></div>-->
+<!--                <div class="ui-block-c"><button type="submit" data-theme="a">9</button></div>-->
+<!--                <div class="ui-block-a"></div>-->
+<!--                <div class="ui-block-b"><button type="submit" data-theme="a">0</button></div>-->
+<!--                <div class="ui-block-c"></div>-->
+            </fieldset>
+            <fieldset class="ui-grid-a">
+                <div class="ui-block-a">Channel</div>
+                <div class="ui-block-b">Volume</div>
+                <div class="ui-block-a"><button type="submit" data-theme="a">+</button></div>
+                <div class="ui-block-b"><button type="submit" data-theme="a">+</button></div>
+                <div class="ui-block-a"><button type="submit" data-theme="a">-</button></div>
+                <div class="ui-block-b"><button type="submit" data-theme="a">-</button></div>
+            </fieldset>
         </div>
 
     </div><!-- /content -->
-    
+
     <div data-role="footer" data-position="fixed">
             <div data-role="navbar">
                 <ul>
@@ -68,18 +100,39 @@
         <h1>Settings</h1>
     </div><!-- /header -->
 
-    <div data-role="content" data-content-theme="b">
+    <div data-role="content" data-content-theme="a">
 
-        <label for="iptext">Arduino IP:</label>
-        <input type="text" name="arduino_ip" id="iptext" value=""/>
+        <div data-role="collapsible" id="arduino_setting_collapsible" data-theme="a" data-content-theme="c">
+            <h3>Arduino Settings</h3>
+            <label for="iptext">Arduino IP:</label>
+            <input type="text" name="arduino_ip" id="iptext" value=""/>
 
-        <label for="porttext">Arduino Port:</label>
-        <input type="text" name="arduino_port" id="porttext" value=""/>
+            <label for="porttext">Arduino Port:</label>
+            <input type="text" name="arduino_port" id="porttext" value=""/>
 
-        <label for="passwordtext">Arduino Password:</label>
-        <input type="password" name="arduino_password" id="passwordtext" value=""/>
-        <br>
-        <input id="setting_button" type="submit" value="Submit" data-theme="a"/>
+            <label for="passwordtext">Arduino Password:</label>
+            <input type="password" name="arduino_password" id="passwordtext" value=""/>
+            <br>
+            <input id="setting_button" type="submit" value="Submit" data-theme="a"/>
+        </div>
+
+        <div data-role="collapsible" id="interface_setting_collapsible" data-theme="a" data-content-theme="c">
+            <h3>Interface Settings</h3>
+
+            <label for="rgb_picker_switch">RGB Color picker:</label>
+            <select name="slider" id="rgb_picker_switch" data-role="slider">
+                <option value="off">Off</option>
+                <option value="on">On</option>
+            </select>
+
+            <label for="rgb_sliders_switch">RGB Color sliders:</label>
+            <select name="slider" id="rgb_sliders_switch" data-role="slider">
+                <option value="off">Off</option>
+                <option value="on">On</option>
+            </select>
+
+        </div>
+
 
     </div><!-- /content -->
 
