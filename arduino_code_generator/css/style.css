@@ -1,0 +1,81 @@
+#holder {
+    border-style:solid;
+    border-width:5px;
+    border-color:gray;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+    bottom: 50px;
+    overflow: auto;
+}
+
+.dottedContainer {
+    border-style:dotted;
+    border-width:5px;
+    border-color:gray;
+    position: absolute;
+    overflow: auto;
+}
+
+#added_items {
+    top: 10px;
+    right: 10px;
+    /*max-width: 600px;*/
+    /*max-height: 600px;*/
+    width: 600px;
+    height: 600px;
+}
+
+#settings {
+    bottom: 10px;
+    right: 10px;
+    /*max-width: 600px;*/
+    /*max-height: 600px;*/
+    width: 600px;
+    height: 200px;
+}
+
+.makeMeDroppable_1 {
+    width: 60px;
+    height: 60px;
+    border: 2px;
+    border-style: dotted;
+    border-color: gray;
+    float: left;
+    list-style: none;
+    margin: 10px 10px 10px 10px;
+}
+
+
+.makeMeDraggable_1 {
+    width: 50px;
+    height: 50px;
+    background: white;
+    background-image: url("../img/led_green.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+#arduino_image{
+    float: right;
+    margin-right: 90px;
+    width: 450px;
+    height: 315px;
+    background-image: url("../img/arduino_uno.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+h3 {
+   font-family: verdana;
+   font-size: 20px;
+   text-align: center;
+   color: #999999;
+}
+
+.ui-draggable-dragging {
+    box-shadow: 2px 2px 5px #505050;
+}
