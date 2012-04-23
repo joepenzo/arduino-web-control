@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/drag.js"></script>
+    <script type="text/javascript" src="js/generator.js"></script>
+    <title></title>
+</head>
+
+<body>
+
+
+
+<div id="holder">
+
+    <div id="added_items" class="dottedContainer">
+        <ul id="drop_pins_digital">
+            <li id="drop_pin_13_d" value="13" class="drop_pin"> <h3>13</h3></li>
+            <li id="drop_pin_12_d" value="12" class="drop_pin"> <h3>12</h3></li>
+            <li id="drop_pin_11_d" value="11" class="drop_pin"> <h3>11</h3></li>
+            <li id="drop_pin_10_d" value="10" class="drop_pin"> <h3>10</h3></li>
+            <li id="drop_pin_9_d" value="9" class="drop_pin"> <h3>9</h3></li>
+            <li id="drop_pin_8_d" value="8" class="drop_pin"> <h3>8</h3></li>
+            <li id="drop_pin_7_d" value="7" class="drop_pin"> <h3>7</h3></li>
+            <li id="drop_pin_6_d" value="6" class="drop_pin"> <h3>6</h3></li>
+            <li id="drop_pin_5_d" value="5" class="drop_pin"> <h3>5</h3></li>
+            <li id="drop_pin_4_d" value="4" class="drop_pin"> <h3>4</h3></li>
+            <li id="drop_pin_3_d" value="3" class="drop_pin"> <h3>3</h3></li>
+            <li id="drop_pin_2_d" value="2" class="drop_pin"> <h3>2</h3></li>
+        </ul>
+        <div id="arduino_image"></div>
+        <ul id="drop_pins_analog">
+            <li id="drop_pin_0_a" value="990" class="drop_pin"> <h3>A0</h3></li>
+            <li id="drop_pin_1_a" value="991" class="drop_pin"> <h3>A1</h3></li>
+            <li id="drop_pin_2_a" value="992" class="drop_pin"> <h3>A2</h3></li>
+            <li id="drop_pin_3_a" value="993" class="drop_pin"> <h3>A3</h3></li>
+            <li id="drop_pin_4_a" value="994" class="drop_pin"> <h3>A4</h3></li>
+            <li id="drop_pin_5_a" value="995" class="drop_pin"> <h3>A5</h3></li>   <!--change 99 to A when code is generated-->
+        </ul>
+    </div>
+    <div id="settings" class="dottedContainer">
+        <div id="settings_form" >
+            <label for="ip_text">ip-addres:</label> <input type="text" id="ip_text" /> <br>
+            <label for="ip_text">port:</label><input type="text" id="port_text" /> <br>
+            <label for="ip_text">gateway:</label><input type="text" id="gateway_text" /> <br>
+            <label for="ip_text">subnet:</label><input type="text" id="subnet_text" /> <br>
+            <button type="button" id="generate_button">code it!</button>
+        </div>
+    </div>
+
+    <div id="draggable_items">
+        <div id="lightStack" value="light" class="dragLight"> </div>
+        <div id="tempSensorStack" value="temp" class="dragTemp"> </div>
+    </div>
+
+
+
+
+
+</div>
+
+
+
+</body>
+
+</html>

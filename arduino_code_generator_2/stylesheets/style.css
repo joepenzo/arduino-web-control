@@ -1,0 +1,283 @@
+
+#wrapper {
+    position: absolute;
+    top: 1000px;
+	  text-align: left;
+	  width: 720px;
+	  margin-left: auto;
+	  margin-right: auto;
+}
+
+#options{
+	width: 200px;
+	height:550px;
+	border:1px solid black;
+	float:left;
+}
+
+#frame{
+	width:513px;
+	height:550px;
+	//background-image: url("../images/UK-Map.gif");
+	background-repeat: repeat-y;
+    	background-position: 0 0;
+    	border:1px solid black;
+    	float:right;
+}
+
+#tbldevs{
+	border:1px solid black;
+	width:80%;
+	margin-left:50px;
+	margin-top:10px;
+}
+
+#tbldevs th{
+	text-align:center;
+	height:50px;
+	width:50px;
+}
+
+#tbldevs td{
+	height:50px;
+}
+
+
+#drag1 {
+	margin-left:15px;
+	margin-top:15px;
+	background-image: url("../images/cf_32x32.png");
+	width:32px;
+	height:32px;
+}
+
+#drag2 {
+	margin-left:15px;
+	margin-top:15px;
+	background-image: url("../images/dw_32x32.png");
+	width:32px;
+	height:32px;
+}
+
+#drag3 {
+	margin-left:15px;
+	margin-top:15px;
+	background-image: url("../images/fla_32x32.png");
+	width:32px;
+	height:32px;
+}
+
+#drag4 {
+	margin-left:15px;
+	margin-top:15px;
+	background-image: url("../images/flex_32x32.png");
+	width:32px;
+	height:32px;
+}
+
+#drag5 {
+	margin-left:15px;
+	margin-top:15px;
+	background-image: url("../images/pdf_32x32.png");
+	width:32px;
+	height:32px;
+}
+
+#drag6 {
+	margin-left:15px;
+	margin-top:15px;
+	background-image: url("../images/ps_32x32.png");
+	width:32px;
+	height:32px;
+}
+
+.ui-draggable-helperMoving {
+	border: 1px dotted #000;
+	padding: 6px;
+	background: #fff;
+	font-size: 1.2em;
+	width:100px;
+	height:100px;
+}
+
+.ui-draggable-helperStoped {
+	border: 1px solid #000;
+	width:5px;
+	height:5px;
+}
+
+
+
+/* classes for dragged stuff */
+.dragged1 {
+	position:absolute;
+	background-image: url("../images/cf_32x32.png");
+	width:32px;
+	height:32px;
+}
+
+.dragged2 {
+	position:absolute;
+	background-image: url("../images/dw_32x32.png");
+	width:32px;
+	height:32px;
+}
+
+.dragged3 {
+	position:absolute;
+	background-image: url("../images/fla_32x32.png");
+	width:32px;
+	height:32px;
+}
+
+.dragged4 {
+	position:absolute;
+	background-image: url("../images/flex_32x32.png");
+	width:32px;
+	height:32px;
+}
+
+.dragged5 {
+	position:absolute;
+	background-image: url("../images/pdf_32x32.png");
+	width:32px;
+	height:32px;
+}
+
+.dragged6 {
+	position:absolute;
+	background-image: url("../images/ps_32x32.png");
+	width:32px;
+	height:32px;
+}
+
+
+#element{
+	border:1px solid red
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    font-family: verdana;
+    font-size: 20px;
+    color: #999999;
+}
+
+#holder {
+    border-style:solid;
+    border-width:5px;
+    border-color:gray;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+    bottom: 50px;
+    overflow: auto;
+}
+
+.dottedContainer {
+    border-style:dotted;
+    border-width:5px;
+    border-color:gray;
+    position: absolute;
+    overflow: auto;
+}
+
+#added_items {
+    top: 10px;
+    right: 10px;
+    /*max-width: 600px;*/
+    /*max-height: 600px;*/
+    width: 600px;
+    height: 600px;
+}
+
+#settings {
+    bottom: 10px;
+    right: 10px;
+    /*max-width: 600px;*/
+    /*max-height: 600px;*/
+    width: 600px;
+    height: 200px;
+}
+
+.makeMeDroppable_1 {
+    width: 60px;
+    height: 60px;
+    border: 2px;
+    border-style: dotted;
+    border-color: gray;
+    float: left;
+    list-style: none;
+    margin: 10px 10px 10px 10px;
+}
+
+#settings_form {
+    padding:  20px 20px 20px 50px;
+}
+
+
+.drag,  .drag2 , .dragHelper {
+    width: 50px;
+    height: 50px;
+    background: white;
+    background-image: url("../images/led_green.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.drag2{
+    background: red;
+}
+
+.dragHelper{
+    background: blue;
+}
+
+
+#draggableHelper {
+    background-color: gray;
+}
+
+#arduino_image{
+    float: right;
+    margin-right: 90px;
+    width: 450px;
+    height: 315px;
+    background-image: url("../images/arduino_uno.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+h3 {
+   text-align: center;
+}
+
+.ui-draggable-dragging {
+    box-shadow: 2px 2px 5px #505050;
+}
+
+
+
