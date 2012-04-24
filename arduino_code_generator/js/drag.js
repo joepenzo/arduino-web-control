@@ -45,7 +45,7 @@ $(document).ready(function() {
     }
 
     function createTempratureClone( event ) {
-            var clone = '<div id="draggableClone" class="dragHelperTemp" value="temp"></div>';
+            var clone = '<div id="draggableClone" class="dragHelperTemp" value="sensor"></div>';
             return clone;
         }
 

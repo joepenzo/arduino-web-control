@@ -4,6 +4,7 @@
 
 
 var allLights = new Array();
+var allSensors = new Array();
 var totalCode = '';
 var close = '\n}\n';
 var ligthName = '';
@@ -25,6 +26,7 @@ $(document).ready(function(){
 function getAddedItems (){
     // check for items in dom to fill array
     allLights.length = 0; // empty array before filling it again
+    allSensors.length = 0;
     // loop trough al drop pin elements
     $('.drop_pin').each(function(index, object) {
         if ( $(this).children()[1] ) {
@@ -36,6 +38,11 @@ function getAddedItems (){
             if (itemType == 'light') {
                 var itemId =  $(this).find('div:first').attr('id');
                 allLights.push(itemId + "_" + pin);
+            }
+            if (itemType == 'sensor') {
+                var itemId =  $(this).find('div:first').attr('id');
+                allSensors.push(itemId + "_" + pin);
+                console.log(allSensors);
             }
 
         }
