@@ -31,6 +31,7 @@
             <li id="drop_pin_4_d" value="4" class="drop_pin"> <h3>4</h3></li>
             <li id="drop_pin_3_d" value="3" class="drop_pin"> <h3>3</h3></li>
             <li id="drop_pin_2_d" value="2" class="drop_pin"> <h3>2</h3></li>
+            <li id="empty" class="empty_drop_pin" ></li>
         </ul>
         <div id="arduino_image"></div>
         <ul id="drop_pins_analog">
@@ -40,9 +41,9 @@
             <li id="drop_pin_3_a" value="993" class="drop_pin"> <h3>A3</h3></li>
             <li id="drop_pin_4_a" value="994" class="drop_pin"> <h3>A4</h3></li>
             <li id="drop_pin_5_a" value="995" class="drop_pin"> <h3>A5</h3></li>   <!--change 99 to A when code is generated-->
+            <li id="empty2" class="empty_drop_pin" ></li>
+        </li>
         </ul>
-    </div>
-    <div id="settings" class="dottedContainer">
         <div id="settings_form" >
             <label for="ip_text">ip-addres:</label> <input type="text" id="ip_text" /> <br>
             <label for="ip_text">port:</label><input type="text" id="port_text" /> <br>
@@ -52,9 +53,11 @@
         </div>
     </div>
 
+
     <div id="draggable_items">
         <div id="lightStack" value="light" class="dragLight"> </div>
         <div id="tempSensorStack" value="sensor" class="dragTemp"> </div>
+        <div id="rgbLedStack" value="sensor" class="dragRgbLed"> </div>
     </div>
 
 

@@ -5,7 +5,7 @@
 
 var allLights = new Array();
 var allSensors = new Array();
-var totalCode = '';
+var allRgbLights = new Array();
 var close = '\n}\n';
 var ligthName = '';
 var ligthPin = '';
@@ -17,7 +17,7 @@ $(document).ready(function(){
     $("#generate_button").click(function () {
         getAddedItems();
         generateFullCode();
-        console.log(totalCode);
+        console.log(generateFullCode());
     });
 
 });
@@ -27,6 +27,7 @@ function getAddedItems (){
     // check for items in dom to fill array
     allLights.length = 0; // empty array before filling it again
     allSensors.length = 0;
+    allRgbLights.length = 0;
     // loop trough al drop pin elements
     $('.drop_pin').each(function(index, object) {
         if ( $(this).children()[1] ) {
@@ -42,7 +43,11 @@ function getAddedItems (){
             if (itemType == 'sensor') {
                 var itemId =  $(this).find('div:first').attr('id');
                 allSensors.push(itemId + "_" + pin);
-                console.log(allSensors);
+            }
+            if (itemType == 'rgbLed') {
+                var itemId =  $(this).find('div:first').attr('id');
+                allRgbLights.push(itemId + "_" + pin);
+                console.log(allRgbLights);
             }
 
         }
@@ -51,6 +56,7 @@ function getAddedItems (){
 }
 
 function generateVariables (){
+    var actionNumber = -1;
     var totalVariables = '';
     var mac = 'byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };\n';
     var gateway = 'byte gateway[] = { ' + $("#gateway_text").val().replace( /\./g,', ') + ' };\n';
@@ -60,8 +66,9 @@ function generateVariables (){
     var readString = 'String readString = String(30);\n';
     var ligths = '\n';
     var actions = '\n';
-    var actionNumber = -1;
     var getCommands = '\n';
+    var tempratureSensor = '\n';
+    var rgbLights = '\n';
 
 
     actions +=
@@ -91,9 +98,34 @@ function generateVariables (){
             'String r_'+ ligthName + 'Off = "GET /?p=' + ligthPin + '&s=0"; \n';
     }
 
+    for( i=0; i < allSensors.length; i++){
+        var sensor = allSensors[i];
+        var sensorSubstring = sensor.split('_');
+        sensorName = sensorSubstring[0];
+        sensorPin = sensorSubstring[1];
+
+        tempratureSensor += ('dht11 temp' + capitaliseFirstLetter(sensorName) + ';\n') +
+            '#define temp' + capitaliseFirstLetter(sensorName) + 'Pin ' + sensorPin + '\n\n';
+
+    }
+
+    for( i=0; i < allRgbLights.length; i++){
+        console.log('pro');
+        var rgbLight = allRgbLights[i];
+        var rgbLightSubstring = rgbLight.split('_');
+        rgbLightName = rgbLightSubstring[0];
+        rgbLightPin = rgbLightSubstring[1];
+
+        rgbLights += 'int redPin = ' + rgbLightPin + ';\n' +
+            'int greenPin = ' + rgbLightPin + ';\n' +
+            'int bluePin = ' + rgbLightPin + ';\n\n' +
+            'int redVal; \nint greenVal;  \nint blueVal;\n\n';
+
+    }
+
     actions += '\nint current_action; \n';
 
-    totalVariables = '\n' + mac + ip + gateway + subnet + port + readString + actions + ligths + getCommands;
+    totalVariables = '\n' + mac + ip + gateway + subnet + port + tempratureSensor + readString + actions + rgbLights + ligths + getCommands;
     return totalVariables;
 }
 
@@ -260,13 +292,17 @@ function generateJsonAllLightReturner() {
 
 
 function generateFullCode() {
-
+    var totalCode = '';
     totalCode = '#include <SPI.h> \n' +
-                '#include <Ethernet.h> \n';
+                '#include <Ethernet.h> \n' +
+                '#include <dht11.h> \n';
 
     totalCode += generateVariables() + generateSetup() + generateLoop() + generateJsonReturner() + generateJsonAllLightReturner();
-
+    return totalCode;
 }
 
 
 
+function capitaliseFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
