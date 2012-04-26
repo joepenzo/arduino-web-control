@@ -11,7 +11,8 @@ byte subnet[] = { 255, 255, 255, 0 };			  //subnet mask
 Server server(80);				          //server port
 String readString = String(30); //string for fetching data from address
 
-dht11 tempSensor;
+dht11 DHT11;
+#define DHT11PIN A3
 
 #define action_none -1
 #define action_status 0
@@ -26,7 +27,6 @@ dht11 tempSensor;
 #define action_off_all 8
 #define change_rbg 9
 
-#define tempPin A5
 // arduino out
 int led1 = 2;
 int led2 = 3;
@@ -69,10 +69,11 @@ void setup(){
   pinMode(greenPin, OUTPUT);     
   pinMode(bluePin, OUTPUT);   
    
-  current_action = -1;  
+  current_action = -1;              
 }
 
 void loop(){
+  
   current_action = -1;
 
   // Create a client connection
@@ -137,6 +138,7 @@ void loop(){
 	   switch(current_action)
 	   {
 	   case action_status:
+              DHT11.read(DHT11PIN); // read temp sensor
 	      client.print("{\"ip\" : \"192.168.1.100\", \"lights\" : [{ \"status\" : \"");
               client.print(digitalRead(led1));
               client.print("\", \"out\" : \"");
@@ -152,9 +154,9 @@ void loop(){
               client.print("\" , \"out\" : \"");
               client.print(led3);
               client.print("\"}] , \"temperature\" : [{ \"temp\" : \"");
-              client.print("100");//print temp in celcius
+              client.print((float)DHT11.temperature, 1);
               client.print("\"}, {\"humidity\" : \"");
-              client.print("50");              //print humidity  
+              client.print((float)DHT11.humidity, 0);     
 	      client.print("\"}]}");
 	     break;
 	   case action_on_led1:
@@ -280,6 +282,8 @@ int8_t charToInt( char *str ){
   Serial.print(r);
   return r;   
  }  
+ 
+  
  
 
 void writeRGBValue(int red, int green, int blue){

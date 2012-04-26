@@ -7,6 +7,10 @@ var red = sliderStartVal;
 var green = sliderStartVal;
 var blue= sliderStartVal;
 
+var redPicker;
+var greenPicker;
+var bluePicker;
+
 
 function updateColor(){
 
@@ -56,6 +60,15 @@ function requestRGB() {
       //  green = data.green;
       //  blue = data.blue;
       //  console.log('red ' + red + ' && green ' + green + ' && blue ' + blue);
+    }, 'json');
+}
+
+
+
+function requestRGBColorPicker() {
+    console.log("dikkkeshit");
+    $.get("arduinorgbrequest.php", { ip: localStorage.getItem("arduino_ip") , port: localStorage.getItem("arduino_port"), r: redPicker , g: greenPicker, b: bluePicker  }, function(data){
+
     }, 'json');
 }
 
@@ -221,8 +234,8 @@ function createRGB(jSonData) {
 
 function createTemperature(jSonData) {
     var type = 'temperature';
-    var tempStatus = '19';
-    var humStatus = '60';
+    var tempStatus = jSonData.temperature[0].temp;
+    var humStatus = jSonData.temperature[1].humidity;
     createCollapsibleContent(type);
 
     $("<h3/>", {
@@ -320,10 +333,10 @@ $('#canvas_picker').bind('mousemove', function(event){
     var y = event.pageY - event.currentTarget.offsetTop;
     var ctx = document.getElementById('canvas_picker').getContext('2d');
     var img_data = ctx.getImageData(x, y, 1, 1).data;
-    var R = img_data[0];
-    var G = img_data[1];
-    var B = img_data[2];
-    rgb = 'rgb('+R+','+G+','+B+')';
+    redPicker = img_data[0];
+    greenPicker = img_data[1];
+    bluePicker = img_data[2];
+    rgb = 'rgb('+redPicker+','+greenPicker+','+bluePicker+')';
     $('#picked_color_preview').css('background-color', rgb);
 });
 

@@ -44,7 +44,7 @@
             <div id='picked_color'> </div>
             <div id='picked_color_preview'> </div>
             <div id='rgb_submitbutton_holder'>
-                <input id="rbg_colorpicker_button" type="submit" value="Submit" data-theme="a"/>
+                <input id="rbg_colorpicker_button" type="submit" value="Submit" onclick="requestRGBColorPicker()" data-theme="a"/>
             </div>
         </div>
 
